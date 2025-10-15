@@ -55,7 +55,10 @@ public class ControladorUsuario extends HttpServlet {
 
         if (status > 0) {
             response.sendRedirect("mensaje.jsp");
+        } else {
+            response.getWriter().println("❌ Error: no se pudo registrar el usuario.");
         }
+
 
     }
 

@@ -3,17 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/src/java/model/UsuarioDAO.java</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/src/java/controller/ControladorUsuario.java</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/src/java/interfaces/CRUD.java</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/src/java/model/Conexion.java</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/src/java/model/Usuario.java</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/web/index.jsp</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/web/editarUsuario.jsp</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/web/listaUsuarios.jsp</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/web/regUsuario.jsp</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/src/java/controller/EditarUsuario.java</file>
-            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/AdmonSistema/src/java/controller/EliminarUsuario.java</file>
+            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/controller/ControladorUsuario.java</file>
+            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/model/Conexion.java</file>
+            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/model/UsuarioDAO.java</file>
+            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/controller/EditarUsuario.java</file>
+            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/controller/EliminarUsuario.java</file>
+            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/model/Usuario.java</file>
+            <file>file:/C:/Users/USUARIO.DESKTOP-64OMC89/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/interfaces/CRUD.java</file>
         </group>
     </open-files>
 </project-private>

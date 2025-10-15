@@ -20,6 +20,7 @@ public class Usuario {
 
      public Usuario() {
      }
+     
      public Usuario(int iddato, String identificacion, String nombre, String apellido, String email, String usuario,
      String clave, int idperfil) {
      this.iddato = iddato;

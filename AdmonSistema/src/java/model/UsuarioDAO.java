@@ -28,7 +28,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
             con = cn.crearConexion();
-            String q = "INSERT INTO datos (identificacion, nombre, apellido, email, usuario, clave, id_perfil)" + "values (?,?,?,?,?,?,?)";
+            String q = "INSERT INTO user (identificacion, nombre, apellido, email, telefono, usuario, clave, perfil)" + "values (?,?,?,?,?,?,?,?)";
 
             ps = con.prepareStatement(q);
 
@@ -45,10 +45,11 @@ public class UsuarioDAO implements CRUD {
 
             System.out.print("REGISTRO GUARDADO DE FORMA EXITOSA...");
 
-            }catch (SQLException ex){
-            System.out.print("ERROR AL REGISTRAR LA ACTIVIDAD...");
-            System.out.print(ex.getMessage());
+            }catch (SQLException ex) {
+                System.out.println("❌ ERROR AL REGISTRAR LA ACTIVIDAD:");
+                ex.printStackTrace();
             }
+
             return estatus;
         }
     
@@ -61,7 +62,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
                 con = cn.crearConexion();
-                String q = "UPDATE datos SET identificacion=?, nombre=?, apellido=?, email=?, usuario=?,clave =  ? WHERE  iddato =  ?";
+                String q = "UPDATE user SET identificacion=?, nombre=?, apellido=?, email=?, usuario=?,clave =  ? WHERE  iddato =  ?";
 
                 ps = con.prepareStatement(q);
 
@@ -95,7 +96,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
             con = cn.crearConexion();
-            String q = "DELETE FROM datos WHERE iddato =?";
+            String q = "DELETE FROM user WHERE iddato =?";
 
             ps = con.prepareStatement(q);
             ps.setInt(1, id);
@@ -122,7 +123,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
                 con = cn.crearConexion();
-                String q = "SELECT * FROM datos WHERE iddato =?";
+                String q = "SELECT * FROM user WHERE iddato =?";
 
                 ps = con.prepareStatement(q);
                 ps.setInt(1, id);
@@ -161,7 +162,7 @@ public class UsuarioDAO implements CRUD {
 
         try {
             con = cn.crearConexion();
-            String q = "SELECT * FROM datos";
+            String q = "SELECT * FROM user";
 
             ps = con.prepareStatement(q);
 
