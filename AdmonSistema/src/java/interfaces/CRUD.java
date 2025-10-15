@@ -4,6 +4,7 @@
  */
 package interfaces;
 
+import java.util.List;
 import model.Usuario;
 /**
  *
@@ -11,7 +12,8 @@ import model.Usuario;
  */
 public interface CRUD {
     public int agregarUsuario(Usuario u);
-    public int actualizarDatos(Usuario u);
-    public int eliminarDatos(int id);
-    public Usuario listarDatos_Id(int id);
+    public int actualizarUsuarios(Usuario u);
+    public int eliminarUsuarios(int id);
+    public Usuario listarUsuarios_Id(int id);
+    public List<Usuario> listadoUsuarios();
 }

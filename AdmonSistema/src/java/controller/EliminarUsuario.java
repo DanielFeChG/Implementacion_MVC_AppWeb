@@ -6,7 +6,6 @@ package controller;
 
 import java.io.IOException;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,45 +15,19 @@ import model.*;
  *
  * @author USUARIO
  */
-@WebServlet("/ControladorUsuario")
-public class ControladorUsuario extends HttpServlet {
+public class EliminarUsuario extends HttpServlet {
 
-    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        String identificacion;
-        String nombre;
-        String apellido;
-        String email;
-        String usuario;
-        String clave;
-        int idperfil;
+        int id = Integer.parseInt(request.getParameter("id"));
 
-        identificacion = new String(request.getParameter("cidentificacion").getBytes("ISO-8859-1"), "UTF-8");
-        nombre = new String(request.getParameter("cnombre").getBytes("ISO-8859-1"), "UTF-8");
-        apellido = new String(request.getParameter("capellido").getBytes("ISO-8859-1"), "UTF-8");
-        email = new String(request.getParameter("cmail").getBytes("ISO-8859-1"), "UTF-8");
-        usuario = new String(request.getParameter("cusuario").getBytes("ISO-8859-1"), "UTF-8");
-        clave = new String(request.getParameter("cclave").getBytes("ISO-8859-1"), "UTF-8");
-        idperfil = Integer.parseInt(request.getParameter("cidperfil"));
-
-        Usuario u = new Usuario();
         UsuarioDAO udao = new UsuarioDAO();
+        int estatus = udao.eliminarUsuarios(id);
 
-        u.setIdentificacion(identificacion);
-        u.setNombre(nombre);
-        u.setApellido(apellido);
-        u.setEmail(email);
-        u.setUsuario(usuario);
-        u.setClave(clave);
-        u.setIdperfil(idperfil);
-
-        int status = udao.agregarUsuario(u);
-
-        if (status > 0) {
-            response.sendRedirect("mensaje.jsp");
+        if (estatus > 0) {
+            response.sendRedirect("listaUsuarios.jsp");
         }
 
     }
