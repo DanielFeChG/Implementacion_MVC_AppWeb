@@ -70,6 +70,9 @@
             <label for="cmail">Email:</label>
             <input type="email" id="cmail" name="cmail" required>
 
+            <label for="ctelefono">Telefono:</label>
+            <input type="text" id="ctelefono" name="ctelefono" required>
+            
             <label for="cusuario">Usuario:</label>
             <input type="text" id="cusuario" name="cusuario" required>
 

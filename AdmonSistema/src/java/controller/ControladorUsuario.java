@@ -27,6 +27,7 @@ public class ControladorUsuario extends HttpServlet {
         String identificacion;
         String nombre;
         String apellido;
+        long telefono;
         String email;
         String usuario;
         String clave;
@@ -36,6 +37,7 @@ public class ControladorUsuario extends HttpServlet {
         nombre = new String(request.getParameter("cnombre").getBytes("ISO-8859-1"), "UTF-8");
         apellido = new String(request.getParameter("capellido").getBytes("ISO-8859-1"), "UTF-8");
         email = new String(request.getParameter("cmail").getBytes("ISO-8859-1"), "UTF-8");
+        telefono = Long.parseLong(request.getParameter("ctelefono"));
         usuario = new String(request.getParameter("cusuario").getBytes("ISO-8859-1"), "UTF-8");
         clave = new String(request.getParameter("cclave").getBytes("ISO-8859-1"), "UTF-8");
         idperfil = Integer.parseInt(request.getParameter("cidperfil"));
@@ -47,6 +49,7 @@ public class ControladorUsuario extends HttpServlet {
         u.setNombre(nombre);
         u.setApellido(apellido);
         u.setEmail(email);
+        u.setTelefono(telefono);
         u.setUsuario(usuario);
         u.setClave(clave);
         u.setIdperfil(idperfil);
