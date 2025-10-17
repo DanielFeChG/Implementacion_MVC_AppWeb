@@ -22,6 +22,7 @@ public class EditarUsuario extends HttpServlet {
     String nombre;
     String apellido;
     String email;
+    long telefono;
     String usuario;
     String clave;
     int idperfil;
@@ -35,6 +36,7 @@ public class EditarUsuario extends HttpServlet {
         nombre = new String(request.getParameter("cnombre").getBytes("ISO-8859-1"), "UTF-8");
         apellido = new String(request.getParameter("capellido").getBytes("ISO-8859-1"), "UTF-8");
         email = new String(request.getParameter("cmail").getBytes("ISO-8859-1"), "UTF-8");
+        telefono = Long.parseLong(request.getParameter("ctelefono"));
         usuario = new String(request.getParameter("cusuario").getBytes("ISO-8859-1"), "UTF-8");
         clave = new String(request.getParameter("cclave").getBytes("ISO-8859-1"), "UTF-8");
         idperfil = Integer.parseInt(request.getParameter("cperfil"));
@@ -45,6 +47,7 @@ public class EditarUsuario extends HttpServlet {
         a.setNombre(nombre);
         a.setApellido(apellido);
         a.setEmail(email);
+        a.setTelefono(telefono);
         a.setUsuario(usuario);
         a.setClave(clave);
         a.setIdperfil(idperfil);

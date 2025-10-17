@@ -28,7 +28,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
             con = cn.crearConexion();
-            String q = "INSERT INTO tb_user (identificacion, nombre, apellido, email, telefono, usuario, clave, perfil)" + "values (?,?,?,?,?,?,?,?)";
+            String q = "INSERT INTO tb_user (identificacion, nombre, apellido, email, telefono, usuario, clave, idperfil)" + "values (?,?,?,?,?,?,?,?)";
 
             ps = con.prepareStatement(q);
 
@@ -53,7 +53,7 @@ public class UsuarioDAO implements CRUD {
 
             return estatus;
         }
-    
+
         @Override
         public int actualizarUsuarios(Usuario u) {
             Conexion cn = new Conexion();
@@ -63,7 +63,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
                 con = cn.crearConexion();
-                String q = "UPDATE user SET identificacion=?, nombre=?, apellido=?, email=?, usuario=?,clave =  ? WHERE  iddato =  ?";
+                String q = "UPDATE tb_user SET identificacion=?, nombre=?, apellido=?, email=?, telefono=?, usuario=?, clave=?, idperfil=? WHERE iddato=?";
 
                 ps = con.prepareStatement(q);
 
@@ -71,22 +71,24 @@ public class UsuarioDAO implements CRUD {
                 ps.setString(2, u.getNombre());
                 ps.setString(3, u.getApellido());
                 ps.setString(4, u.getEmail());
-                ps.setString(5, u.getUsuario());
-                ps.setString(6, u.getClave());
-                ps.setInt(7, u.getIddato());
+                ps.setLong(5, u.getTelefono());
+                ps.setString(6, u.getUsuario());
+                ps.setString(7, u.getClave());
+                ps.setInt(8, u.getIdperfil());
+                ps.setInt(9, u.getIddato()); // <--- este era el error principal
 
                 estatus = ps.executeUpdate();
                 con.close();
 
-                System.out.print("REGISTRO ACTUALIZADO DE FORMA EXITOSA...");
+                System.out.println("✅ REGISTRO ACTUALIZADO DE FORMA EXITOSA...");
 
             } catch (SQLException ex) {
-                System.out.print("ERROR AL ACTUALIZAR LA ACTIVIDAD...");
-                System.out.print(ex.getMessage());
+                System.out.println("❌ ERROR AL ACTUALIZAR LA ACTIVIDAD...");
+                ex.printStackTrace();
             }
             return estatus;
         }
-        
+
         @Override
         public int eliminarUsuarios(int id) {
             Conexion cn = new Conexion();
@@ -97,7 +99,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
             con = cn.crearConexion();
-            String q = "DELETE FROM user WHERE iddato =?";
+            String q = "DELETE FROM tb_user WHERE iddato =?";
 
             ps = con.prepareStatement(q);
             ps.setInt(1, id);
@@ -124,7 +126,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
                 con = cn.crearConexion();
-                String q = "SELECT * FROM user WHERE iddato =?";
+                String q = "SELECT * FROM tb_user WHERE iddato =?";
 
                 ps = con.prepareStatement(q);
                 ps.setInt(1, id);
@@ -137,9 +139,10 @@ public class UsuarioDAO implements CRUD {
                     u.setNombre(rs.getString("nombre"));
                     u.setApellido(rs.getString("apellido"));
                     u.setEmail(rs.getString("email"));
+                    u.setTelefono(rs.getLong("telefono"));
                     u.setUsuario(rs.getString("usuario"));
                     u.setClave(rs.getString("clave"));
-                    u.setIdperfil(rs.getInt("id_perfil"));
+                    u.setIdperfil(rs.getInt("idperfil"));
                 }
 
                 System.out.print("REGISTRO ENCONTRADO DE FORMA EXITOSA...");
@@ -163,7 +166,7 @@ public class UsuarioDAO implements CRUD {
 
         try {
             con = cn.crearConexion();
-            String q = "SELECT * FROM user";
+            String q = "SELECT * FROM tb_user";
 
             ps = con.prepareStatement(q);
 
@@ -178,7 +181,7 @@ public class UsuarioDAO implements CRUD {
                 u.setEmail(rs.getString("email"));
                 u.setUsuario(rs.getString("usuario"));
                 u.setClave(rs.getString("clave"));
-                u.setIdperfil(rs.getInt("id_perfil"));
+                u.setIdperfil(rs.getInt("idperfil"));
 
                 lista.add(u);
             }
