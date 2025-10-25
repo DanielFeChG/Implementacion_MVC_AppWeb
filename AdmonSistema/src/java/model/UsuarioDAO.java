@@ -28,7 +28,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
             con = cn.crearConexion();
-            String q = "INSERT INTO tb_user (identificacion, nombre, apellido, email, telefono, usuario, clave, idperfil)" + "values (?,?,?,?,?,?,?,?)";
+            String q = "INSERT INTO datos (identificacion, nombre, apellido, email, telefono, usuario, clave, id_perfil)" + "values (?,?,?,?,?,?,?,?)";
 
             ps = con.prepareStatement(q);
 

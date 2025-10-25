@@ -16,8 +16,8 @@ import model.*;
  * @author USUARIO
  */
 public class EditarUsuario extends HttpServlet {
-
-    int id;
+    
+    int idDato;
     String identificacion;
     String nombre;
     String apellido;
@@ -25,24 +25,24 @@ public class EditarUsuario extends HttpServlet {
     long telefono;
     String usuario;
     String clave;
-    int idperfil;
+    int idPerfil;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        id = Integer.parseInt(request.getParameter("cidd"));
-        identificacion = new String(request.getParameter("cid").getBytes("ISO-8859-1"), "UTF-8");
+        //idDato = Integer.parseInt(request.getParameter("cid"));
+        identificacion = new String(request.getParameter("cidentificacion").getBytes("ISO-8859-1"), "UTF-8");
         nombre = new String(request.getParameter("cnombre").getBytes("ISO-8859-1"), "UTF-8");
         apellido = new String(request.getParameter("capellido").getBytes("ISO-8859-1"), "UTF-8");
         email = new String(request.getParameter("cmail").getBytes("ISO-8859-1"), "UTF-8");
         telefono = Long.parseLong(request.getParameter("ctelefono"));
         usuario = new String(request.getParameter("cusuario").getBytes("ISO-8859-1"), "UTF-8");
         clave = new String(request.getParameter("cclave").getBytes("ISO-8859-1"), "UTF-8");
-        idperfil = Integer.parseInt(request.getParameter("cperfil"));
+        idPerfil = Integer.parseInt(request.getParameter("cidperfil"));
 
         Usuario a = new Usuario();
-        a.setIddato(id);
+        a.setIddato(idDato);
         a.setIdentificacion(identificacion);
         a.setNombre(nombre);
         a.setApellido(apellido);
@@ -50,7 +50,7 @@ public class EditarUsuario extends HttpServlet {
         a.setTelefono(telefono);
         a.setUsuario(usuario);
         a.setClave(clave);
-        a.setIdperfil(idperfil);
+        a.setIdperfil(idPerfil);
 
         UsuarioDAO udao = new UsuarioDAO();
         int status = udao.actualizarUsuarios(a);

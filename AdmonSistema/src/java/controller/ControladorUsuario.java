@@ -24,15 +24,17 @@ public class ControladorUsuario extends HttpServlet {
         throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
+        //int idDato;
         String identificacion;
         String nombre;
         String apellido;
-        long telefono;
         String email;
+        long telefono;
         String usuario;
         String clave;
-        int idperfil;
+        int idPerfil;
 
+        //idDato = Integer.parseInt(request.getParameter("cid"));
         identificacion = new String(request.getParameter("cidentificacion").getBytes("ISO-8859-1"), "UTF-8");
         nombre = new String(request.getParameter("cnombre").getBytes("ISO-8859-1"), "UTF-8");
         apellido = new String(request.getParameter("capellido").getBytes("ISO-8859-1"), "UTF-8");
@@ -40,7 +42,7 @@ public class ControladorUsuario extends HttpServlet {
         telefono = Long.parseLong(request.getParameter("ctelefono"));
         usuario = new String(request.getParameter("cusuario").getBytes("ISO-8859-1"), "UTF-8");
         clave = new String(request.getParameter("cclave").getBytes("ISO-8859-1"), "UTF-8");
-        idperfil = Integer.parseInt(request.getParameter("cidperfil"));
+        idPerfil = Integer.parseInt(request.getParameter("cidperfil"));
 
         Usuario u = new Usuario();
         UsuarioDAO udao = new UsuarioDAO();
@@ -52,7 +54,7 @@ public class ControladorUsuario extends HttpServlet {
         u.setTelefono(telefono);
         u.setUsuario(usuario);
         u.setClave(clave);
-        u.setIdperfil(idperfil);
+        u.setIdperfil(idPerfil);
 
         int status = udao.agregarUsuario(u);
 

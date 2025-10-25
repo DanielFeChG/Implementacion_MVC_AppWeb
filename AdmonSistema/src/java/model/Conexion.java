@@ -15,7 +15,7 @@ public class Conexion {
     public static String usuario="root";
     public static String clave="";
     public static String servidor="localhost:3306";
-    public static String BD="dbusers";
+    public static String BD="bdpractica";
 
     public Connection crearConexion(){
     Connection con=null;

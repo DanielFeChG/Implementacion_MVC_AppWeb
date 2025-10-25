@@ -9,7 +9,7 @@ package model;
  * @author Usuario
  */
 public class Usuario {
-     int iddato;
+     int idDato;
      String identificacion;
      String nombre;
      String apellido;
@@ -17,14 +17,13 @@ public class Usuario {
      long telefono;
      String usuario;
      String clave;
-     int idperfil;
+     int idPerfil;
 
      public Usuario() {
      }
      
-     public Usuario(int iddato, String identificacion, String nombre, String apellido, String email, long telefono, String usuario,
-     String clave, int idperfil) {
-        this.iddato = iddato;
+     public Usuario(int idDato, String identificacion, String nombre, String apellido, String email, long telefono, String usuario, String clave, int idPerfil) {
+        this.idDato = idDato;
         this.identificacion = identificacion;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -32,13 +31,13 @@ public class Usuario {
         this.telefono = telefono;
         this.usuario = usuario;
         this.clave = clave;
-        this.idperfil = idperfil;
+        this.idPerfil = idPerfil;
      }
      public int getIddato() {
-     return iddato;
+     return idDato;
      }
      public void setIddato(int iddato) {
-     this.iddato = iddato;
+     this.idDato = iddato;
      }
      public String getIdentificacion() {
      return identificacion;
@@ -64,10 +63,10 @@ public class Usuario {
     public void setEmail(String email) {
     this.email = email;
     }
-    public Long getTelefono() {
+    public long getTelefono() {
     return telefono;
     }
-    public void setTelefono(Long telefono) {
+    public void setTelefono(long telefono) {
     this.telefono = telefono;
     }
     public String getUsuario() {
@@ -83,10 +82,10 @@ public class Usuario {
     this.clave = clave;
     }
     public int getIdperfil() {
-    return idperfil;
+    return idPerfil;
     }
     public void setIdperfil(int idperfil) {
-    this.idperfil = idperfil;
+    this.idPerfil = idperfil;
     }
 
 }
