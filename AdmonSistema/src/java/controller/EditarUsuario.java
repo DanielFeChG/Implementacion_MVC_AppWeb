@@ -6,6 +6,7 @@ package controller;
 
 import java.io.IOException;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import model.*;
  *
  * @author USUARIO
  */
+@WebServlet("/EditarUsuario")
 public class EditarUsuario extends HttpServlet {
     
     int idDato;
@@ -31,7 +33,7 @@ public class EditarUsuario extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        //idDato = Integer.parseInt(request.getParameter("cid"));
+        idDato = Integer.parseInt(request.getParameter("cidd"));
         identificacion = new String(request.getParameter("cidentificacion").getBytes("ISO-8859-1"), "UTF-8");
         nombre = new String(request.getParameter("cnombre").getBytes("ISO-8859-1"), "UTF-8");
         apellido = new String(request.getParameter("capellido").getBytes("ISO-8859-1"), "UTF-8");

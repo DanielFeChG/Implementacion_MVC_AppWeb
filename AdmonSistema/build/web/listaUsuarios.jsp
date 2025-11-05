@@ -129,7 +129,7 @@
                 <td><%=a.getClave()%></td>
                 <td><%=a.getIdperfil()%></td>
                 <td>
-                    <a href="EditarUsuario.jsp?id=<%=a.getIddato()%>" class="action">Editar</a>
+                    <a href="editarUsuariox.jsp?id=<%=a.getIddato()%>" class="action">Editar</a>
                     <a href="eliminarUsuario?id=<%=a.getIddato()%>" class="action">Eliminar</a>
                 </td>
             </tr>
