@@ -1,1 +1,2 @@
 # Implementacion_MVC_AppWeb
+Para que fucnione el TomEE hay que colocar el archivo del server en la ruta C:\\TomEE Server\\apache-tomee-plus-10.1.1, luego ir al documento Implementacion_MVC_AppWeb\AdmonSistema\nbproject\private y verificar que la versión del TomEE coincida con la que está descargada en el equipo
