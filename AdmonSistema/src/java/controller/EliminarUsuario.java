@@ -6,6 +6,7 @@ package controller;
 
 import java.io.IOException;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,13 +16,14 @@ import model.*;
  *
  * @author USUARIO
  */
+@WebServlet("/EliminarUsuario")
 public class EliminarUsuario extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("cidd"));
 
         UsuarioDAO udao = new UsuarioDAO();
         int estatus = udao.eliminarUsuarios(id);

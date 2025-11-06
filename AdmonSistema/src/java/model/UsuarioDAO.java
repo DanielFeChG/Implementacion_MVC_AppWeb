@@ -98,7 +98,7 @@ public class UsuarioDAO implements CRUD {
 
             try {
             con = cn.crearConexion();
-            String q = "DELETE FROM datos WHERE iddato =?";
+            String q = "DELETE FROM datos WHERE id_dato =?";
 
             ps = con.prepareStatement(q);
             ps.setInt(1, id);

@@ -130,7 +130,7 @@
                 <td><%=a.getIdperfil()%></td>
                 <td>
                     <a href="editarUsuariox.jsp?id=<%=a.getIddato()%>" class="action">Editar</a>
-                    <a href="eliminarUsuario?id=<%=a.getIddato()%>" class="action">Eliminar</a>
+                    <a href="EliminarUsuario?cidd=<%= a.getIddato() %>" class="action">Eliminar</a>
                 </td>
             </tr>
             <%
