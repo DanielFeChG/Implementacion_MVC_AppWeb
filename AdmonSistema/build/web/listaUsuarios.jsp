@@ -102,7 +102,7 @@
     <div class="card">
         <h1>Listado de Usuarios</h1>
         <div class="btn-row">
-            <a href="index.jsp" class="btn">Registrar nuevo usuario</a>
+            <a href="regUusario.jsp" class="btn">Registrar nuevo usuario</a>
         </div>
         <table>
             <tr>
@@ -129,7 +129,7 @@
                 <td><%=a.getClave()%></td>
                 <td><%=a.getIdperfil()%></td>
                 <td>
-                    <a href="editarUsuariox.jsp?id=<%=a.getIddato()%>" class="action">Editar</a>
+                    <a href="editarUsuario.jsp?id=<%=a.getIddato()%>" class="action">Editar</a>
                     <a href="EliminarUsuario?cidd=<%= a.getIddato() %>" class="action">Eliminar</a>
                 </td>
             </tr>

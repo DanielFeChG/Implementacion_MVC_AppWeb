@@ -12,6 +12,14 @@
         <servlet-name>EliminarUsuario</servlet-name>
         <servlet-class>controller.EliminarUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorValidar</servlet-name>
+        <servlet-class>controller.ControladorValidar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CerrarSesion</servlet-name>
+        <servlet-class>controller.CerrarSesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControladorUsuario</servlet-name>
         <url-pattern>/controladorUsuario</url-pattern>
@@ -23,5 +31,13 @@
     <servlet-mapping>
         <servlet-name>EliminarUsuario</servlet-name>
         <url-pattern>/eliminarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorValidar</servlet-name>
+        <url-pattern>/controladorValidar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CerrarSesion</servlet-name>
+        <url-pattern>/cerrarSesion</url-pattern>
     </servlet-mapping>
 </web-app>

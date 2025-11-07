@@ -73,8 +73,8 @@
         label {
             position: absolute;
             left: 14px;
-            top: 12px;
-            font-size: 13px;
+            top: 0%;
+            font-size: 10px;
             color: rgba(255, 255, 255, 0.6);
             pointer-events: none;
             transition: all 0.18s ease;
