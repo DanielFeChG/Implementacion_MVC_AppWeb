@@ -102,7 +102,7 @@
     <div class="card">
         <h1>Listado de Usuarios</h1>
         <div class="btn-row">
-            <a href="regUusario.jsp" class="btn">Registrar nuevo usuario</a>
+            <a href="regUsuario.jsp" class="btn">Registrar nuevo usuario</a>
         </div>
         <table>
             <tr>
