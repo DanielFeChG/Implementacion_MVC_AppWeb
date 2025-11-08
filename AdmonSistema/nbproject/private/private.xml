@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/usuario/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/model/LoginDAO.java</file>
-            <file>file:/C:/Users/usuario/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/listaUsuarios.jsp</file>
-            <file>file:/C:/Users/usuario/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/front.jsp</file>
-            <file>file:/C:/Users/usuario/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/regUsuario.jsp</file>
-            <file>file:/C:/Users/usuario/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/mensaje.jsp</file>
-            <file>file:/C:/Users/usuario/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/cpanel.jsp</file>
-            <file>file:/C:/Users/usuario/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/model/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Universidad/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/model/Usuario.java</file>
+            <file>file:/C:/Users/Universidad/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/model/LoginDAO.java</file>
+            <file>file:/C:/Users/Universidad/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/cpanel.jsp</file>
+            <file>file:/C:/Users/Universidad/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/src/java/controller/ControladorValidar.java</file>
+            <file>file:/C:/Users/Universidad/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/index.jsp</file>
+            <file>file:/C:/Users/Universidad/Downloads/Implementacion_MVC_AppWeb/AdmonSistema/web/regUsuario.jsp</file>
         </group>
     </open-files>
 </project-private>
